@@ -44,7 +44,8 @@ Router1(config-if)# no shutdown
 
 Router1(config)# ip route 192.168.3.0 255.255.255.0 192.168.2.2
 
-Router2 Configuration:
+**Router2 Configuration:**
+```sh
 Router2(config)# interface fa0/0
 Router2(config-if)# ip address 192.168.3.1 255.255.255.0
 Router2(config-if)# no shutdown
@@ -55,51 +56,49 @@ Router2(config-if)# no shutdown
 
 Router2(config)# ip route 192.168.1.0 255.255.255.0 192.168.2.1
 
-Dynamic Routing
+**Dynamic Routing**
+```sh
 Enable a dynamic routing protocol (e.g., OSPF) on Router1, Router2, and Router3.
 Configure the dynamic routing protocol to include the networks of Router1, Router2, and Router3.
 Router1 Configuration:
 
-sh
-Copy code
-Router1(config)# router ospf 1
+**Router1(config)# router ospf 1**
 Router1(config-router)# network 192.168.1.0 0.0.0.255 area 0
 Router1(config-router)# network 192.168.2.0 0.0.0.255 area 0
 Router2 Configuration:
 
-sh
-Copy code
-Router2(config)# router ospf 1
+**Router2(config)# router ospf 1**
 Router2(config-router)# network 192.168.2.0 0.0.0.255 area 0
 Router2(config-router)# network 192.168.3.0 0.0.0.255 area 0
 Router3 Configuration:
 
-sh
-Copy code
-Router3(config)# interface fa0/0
+**Router3(config)# interface fa0/0**
 Router3(config-if)# ip address 192.168.4.1 255.255.255.0
 Router3(config-if)# no shutdown
 
-Router3(config)# router ospf 1
+**Router3(config)# router ospf 1**
 Router3(config-router)# network 192.168.3.0 0.0.0.255 area 0
 Router3(config-router)# network 192.168.4.0 0.0.0.255 area 0
-Verification
+
+**Verification**
 Use the ping command on each PC to ensure they can communicate with each other.
 Verify the routing tables on each router using the show ip route command to ensure correct route propagation.
 Example:
 
-sh
-Copy code
 Router1# show ip route
 Router2# show ip route
 Router3# show ip route
-Conclusion
+
+**Conclusion**
+```sh
 By following the above steps, you should have successfully configured static and dynamic routing in Cisco Packet Tracer, ensuring that all PCs can communicate with each other across different networks.
 
-License
+**License**
+```sh
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Additional Resources
+**Additional Resources**
+```sh
 Cisco Packet Tracer Installation Guide
 Cisco IOS Command Reference
 
