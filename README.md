@@ -1,4 +1,5 @@
-# Implementing Static and Dynamic Routing in Cisco Packet Tracer
+# Implementing Static and Dynamic Routing in Cisco Packet Tracer -Computer Networks 
+
 
 ## Description
 This project involves setting up a network with three subnets (Network A, B, and C) using Cisco Packet Tracer. Network A and Network B are connected via static routing, while Network A and Network B are connected to Network C using a dynamic routing protocol. The aim is to ensure full connectivity between all PCs in the network.
